@@ -46,7 +46,7 @@ body {
 .header--nav-guest{
   position: absolute;
   left: 80%;
-  top: 5%;
+  top: 60px;
   width: 220px;
   display: flex;
   justify-content: space-around;
