@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 30px;
+}
+
+.page {
+  /* height: 95vh; */
+  background-image: linear-gradient(to right bottom,
+    #d3c15bbd,
+    #b63e3ebd),
+    url(https://images.unsplash.com/photo-1548890126-91461beb4bf1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  border-radius: 3px;
+}
+.header--logoBox {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+}
+.header--logoBox--img {
+  height: 130px;
+}
+.header--nav-title{
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 53px;
+  position: absolute;
+  left: 35%;
+  top: 2%;
+}
+.header--nav-guest{
+  position: absolute;
+  left: 80%;
+  top: 5%;
+  width: 220px;
+  display: flex;
+  justify-content: space-around;
+}
+.button{
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  padding: 7px 15px;
+  border-radius: 100px;
+}
+.main {
+  padding-top: 300px;
+  padding-left: 150px;
+}
+.main--section{
+  display: flex;
+  flex-direction: column;
+}
+
+.main--section-post {
+  width: 500px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.main--section-postOwner{
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: rgba(175, 128, 41, 0.671);
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+.main--section-postContent{
+  margin-left: 70px;
+}
+.main--section-commentOwner{
+  margin-left: 90px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: rgba(105, 167, 89, 0.801);
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+.main--section-commentContent{
+  margin-left: 160px;
+}
+
+.xcc {
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400px;
+  font-size: 14px;
+  margin-left: 90px;
+  margin-bottom: 8px;
+  width: 250px;
+}
+
+.main--section-submit {
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400px;
+  font-size: 12px;
+  background-color: #fff;
+}
+

@@ -1,0 +1,71 @@
+<main class="page">
+  <header class="header">
+    <div class="header--logoBox">
+      <a href="/">
+        <img src="http://comunidadterapeuticaresurgir.org/wp-content/uploads/2018/04/LOGOFENIX.png" alt="Logo" class="header--logoBox--img">
+      </a>
+    </div>
+    <nav class="header--nav">
+      <h3 class="header--nav-title">fenix</h3>
+      {{#if name}}
+      <div class="header--nav-user">
+        <div class="userName">
+          <h3 class="header--nav-userName">Hi {{name}}</h3>
+        </div>
+        <div class="logoutDiv">
+          <form action="/logout" method="POST">
+            <a href="#" onclick="this.parentNode.submit()" class="header--nav-logout, button">log out</a>
+          </form>
+        </div>
+      </div>
+      <section class="newPost">
+        <textarea rows="6" cols="45" class="newPost--content" placeholder="What is in your mind .."></textarea>
+        <button type="submit" class="newPost--submit">Add the post</button>
+        <h4 class="msg"></h4>
+      </section>
+      {{else}}
+      <div class="header--nav-guest">
+        <a href="/login" class="header--nav-login, button">login</a>
+        <a href="/signup" class="header--nav-login, button">signup</a>
+      </div>
+      {{/if}}
+    </nav>
+  </header>
+  {{#if name}}
+  <main class="main">
+    <section class="main--section">
+      {{#each ruesult}}
+      <div class="main--section-post">
+        <h4 class="main--section-postOwner">By : {{name}}</h4>
+        <p class="main--section-postContent">{{post}}</p>
+        <input type="text" class="main--section-postComment, xcc" id='z{{postid}}' placeholder="Add your comment ..">
+        <button type="submit" class="main--section-submit" value="{{postid}}">Comment</button>
+        {{#each comments}}
+        <div class="main--section-comment">
+          <h4 class="main--section-commentOwner">{{name}}</h4>
+          <p class="main--section-commentContent">{{comment}}</p>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </section>
+  </main>
+  {{else}}
+  <main class="main">
+    <section class="main--section">
+      {{#each ruesult}}
+      <div class="main--section-post">
+        <h4 class="main--section-postOwner">{{name}}</h4>
+        <p class="main--section-postContent">{{post}}</p>
+        {{#each comments}}
+        <div class="main--section-comment">
+          <h4 class="main--section-commentOwner">{{name}}</h4>
+          <p class="main--section-commentContent">{{comment}}</p>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </section>
+  </main>
+  {{/if}}
+</main>
