@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 app.disable('x-powered-by');
-app.set('port', 5555);
+app.set('port', process.env.PORT || 5555);
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
