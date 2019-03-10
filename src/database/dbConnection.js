@@ -4,7 +4,7 @@ require('dotenv').config();
 
 let dbUrl = process.env.DB_URL_local;
 if(process.env.NODE_ENV === 'pro'){
-  dbUrl = DATABASE_URL;
+  dbUrl = process.env.DATABASE_URL;
 }
 
 const params = url.parse(dbUrl);
@@ -16,7 +16,7 @@ const option = {
   port: params.port,
   host: params.host.split(':')[0],
   database: params.path.split('/')[1],
-  ssl: params.hostname !== 'localhost'
+  ssl: params.hostname !== 'localhost',
 };
 
 module.exports = new Pool(option);
