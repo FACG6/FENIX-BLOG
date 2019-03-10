@@ -8,10 +8,10 @@ if(process.env.NODE_ENV === 'pro'){
 }
 
 const params = url.parse(dbUrl);
-const [username, password] = params.auth.split(':');
+const [user, password] = params.auth.split(':');
 
 const option = {
-  username,
+  user,
   password,
   port: params.port,
   host: params.host.split(':')[0],
